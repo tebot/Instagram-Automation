@@ -7,9 +7,7 @@ from time import sleep
 class InstaBot:
     def __init__(self, username, pw):
         self.driver=webdriver.Chrome("C:\\<Path to chromedriver>\\chromedriver.exe")
-        #self.chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito'
         self.driver.get("https://www.instagram.com/")
-        #webbrowser.get(self.chrome_path).open_new("https://www.instagram.com/")
         sleep(2)
         #accept coolkies
         self.driver.find_element_by_xpath("/html/body/div[2]/div/div/div/div[2]/button[1]")\
@@ -47,4 +45,4 @@ if __name__ =='__main__':
     password="I do not show you my password"
     instabot=InstaBot(profileName,password)
     instabot.like_picture("https://www.instagram.com/p/CKl4zQ3lKCl/")
-    instabot.write_comment("https://www.instagram.com/p/CKl4zQ3lKCl/"," Go Berni\n")
+    instabot.write_comment("https://www.instagram.com/p/CKl4zQ3lKCl/"," Nice\n")
